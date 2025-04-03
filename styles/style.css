@@ -14,7 +14,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-main); /* Основной шрифт PressStart2P */
-  font-variation-settings: 'wght' var(--font-weight-card-text); /* Настройка веса основного текста карточки */
 }
 
 .card-title {
@@ -31,6 +30,7 @@
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .header_container {
@@ -63,4 +63,66 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: uppercase;
+}
+
+.main_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_image {
+  width: 696px;
+  height: 696px;
+}
+
+.post {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  margin: 3px 24px 3px 10px;
+}
+
+.content {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 646px;
+  margin: 25px 25px 25px 25px;
+  gap: 27px;
+}
+
+.like-button {
+  display: flex; /* Размещаем содержимое в строку */
+  align-items: center; /* Выравниваем по вертикали */
+  border: none; /* Убираем границы кнопки */
+  background-color: transparent; /* Прозрачный фон */
+  cursor: pointer; /* Курсор руки при наведении */
+  width: 169px;
+  height: 38px;
+  margin-left: 494px;
+  margin-bottom: 25px;
+}
+
+.like-button img {
+  margin-right: 12px; /* Отступ между сердечком и текстом */
+}
+
+.like-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
+  border: 2px solid black; /* Граница вокруг текста "Like" */
+  padding: 12.5px 37px; /* Внутренние отступы текста */
 }

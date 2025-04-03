@@ -3,7 +3,7 @@
 /* Переменные для шрифтов */
 :root {
   --font-main: 'PressStart2P', monospace; /* Основной шрифт */
-  --font-accent: 'Inter', sans-serif; /* Акцентный шрифт */
+  --font-accent: 'Inter', monospace; /* Акцентный шрифт */
 
   /* Переменные для толщины текста */
   --font-weight-card-text: 400; /* Вес текста карточки */
