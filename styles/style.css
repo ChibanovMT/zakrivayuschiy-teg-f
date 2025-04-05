@@ -35,7 +35,7 @@
 
 .header_container {
   display: flex;
-  border: 1px solid black;
+  border: 2px solid black;
   align-items: center;
   justify-content: center;
   height: 368px;
@@ -65,6 +65,8 @@
   text-transform: uppercase;
 }
 
+/* -------------------------------------------------------------------------- */
+
 .main_section {
   display: flex;
   flex-direction: column;
@@ -78,7 +80,7 @@
 
 .post {
   display: flex;
-  border: 1px solid black;
+  border: 2px solid black;
   flex-direction: column;
   margin-bottom: 50px;
 }
@@ -89,6 +91,23 @@
   font-size: 18px;
   line-height: 100%;
   margin: 3px 24px 3px 10px;
+}
+
+.for-watermark {
+  position: relative;
+  display: inline-block;
+}
+
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: 28px;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: var(--label-text-color);
+  opacity: 50%;
 }
 
 .content {
@@ -125,4 +144,73 @@
   line-height: 90%;
   border: 2px solid black; /* Граница вокруг текста "Like" */
   padding: 12.5px 37px; /* Внутренние отступы текста */
+}
+
+/* -------------------------------------------------------------------------- */
+
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 103px;
+}
+
+.save-button {
+  border: 2px solid black;
+  display: flex; /* Размещаем содержимое в строку */
+  align-items: center; /* Выравниваем по вертикали */
+  background-color: transparent; /* Прозрачный фон */
+  cursor: pointer; /* Курсор руки при наведении */
+  padding-right: 17px;
+}
+
+.save_as-text {
+  padding-left: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 18.5px;
+  margin-bottom: 18.5px;
+}
+
+.svg_save-as {
+  position: relative;
+  block-size: 1.5em;
+  mix-blend-mode: difference;
+}
+
+
+
+
+.dialog {
+  width: calc(100% - 40px);
+  max-width: 353px;
+  height: 191px;
+  position: fixed;
+}
+
+.dialog-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 5px 5px 0px 5px;
+}
+
+.dialog-text {
+  width: 234px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.7);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+
+
+
+@supports (-webkit-text-stroke: 1px transparent) {
+  .watermark {
+    -webkit-text-stroke: 1px var(--label-border-color); /* Обводка текста */
+  }
 }

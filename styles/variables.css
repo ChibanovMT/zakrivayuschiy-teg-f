@@ -8,4 +8,7 @@
   /* Переменные для толщины текста */
   --font-weight-card-text: 400; /* Вес текста карточки */
   --font-weight-card-title: 700; /* Вес заголовка карточки */
+
+  --label-text-color: black; /* Цвет текста лейбла */
+  --label-border-color: white; /* Цвет обводки текста */
 }
