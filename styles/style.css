@@ -129,17 +129,17 @@
   gap: 27px;
 }
 
-.like-button {
-  display: flex; /* Размещаем содержимое в строку */
-  align-items: center; /* Выравниваем по вертикали */
-  border: none; /* Убираем границы кнопки */
-  background-color: transparent; /* Прозрачный фон */
-  cursor: pointer; /* Курсор руки при наведении */
-  width: 169px;
+/*.like-button {
+  /*display: flex; /* Размещаем содержимое в строку */
+  /*align-items: center; /* Выравниваем по вертикали */
+ /* border: none; /* Убираем границы кнопки */
+  /*background-color: transparent; /* Прозрачный фон */
+  /*cursor: pointer; /* Курсор руки при наведении */
+  /*width: 169px;
   height: 38px;
   margin-left: 494px;
   margin-bottom: 25px;
-}
+}*/
 
 .like-button img {
   margin-right: 12px; /* Отступ между сердечком и текстом */
@@ -149,8 +149,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
-  border: 2px solid black; /* Граница вокруг текста "Like" */
-  padding: 12.5px 37px; /* Внутренние отступы текста */
 }
 
 .for-image {
@@ -278,4 +276,25 @@
 
 @media (width <= 375px) {
 
+}
+
+/* --------Переработка кнопок------------------------------------------------- */
+
+.card__controls {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+
+.heart-button__try {
+  border: none;
+  cursor: pointer;
+}
+
+.like-button__try {
+  cursor: pointer;
+  border: 2px solid black;
+  width: 130px;
+  height: 38px;
 }

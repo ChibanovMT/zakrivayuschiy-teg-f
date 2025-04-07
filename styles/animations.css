@@ -9,3 +9,41 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+.card__icon-button {
+  transition: box-shadow 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+  box-shadow: 2px 2px;
+}
+
+
+
+.card__icon-button {
+  position: relative; /* Для позиционирования псевдоэлемента */
+  overflow: hidden; /* Скрываем выходящие за пределы элементы */
+}
+
+.card__icon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Цвет псевдоэлемента */
+  transform: translateX(-100%); /* Начальное состояние */
+  transition: transform 0.5s ease-in-out; /* Плавный переход */
+  z-index: 0; /* Псевдоэлемент под текстом */
+}
+
+.card__icon-button:hover::before {
+  transform: translateX(0); /* Конечное состояние */
+}
+
+.card__icon-button span {
+  position: relative; /* Для текста кнопки */
+  z-index: 1; /* Текст над псевдоэлементом */
+}
