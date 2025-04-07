@@ -12,3 +12,37 @@
   --label-text-color: black; /* Цвет текста лейбла */
   --label-border-color: white; /* Цвет обводки текста */
 }
+
+
+:root {
+  --background-image: 
+    /* Первый градиент: повторяющиеся полоски слева направо */
+    repeating-linear-gradient(
+      90deg, 
+      #d3d3d3, 
+      #d3d3d3 2px, 
+      transparent 2px, 
+      transparent 4px
+    ),
+    /* Второй градиент: повторяющиеся полоски сверху вниз */
+    repeating-linear-gradient(
+      180deg, 
+      #d3d3d3, 
+      #d3d3d3 2px, 
+      transparent 2px, 
+      transparent 4px
+    ),
+    /* Третий градиент: плавный переход от #e7e7e7 к #1a1a1a */
+    linear-gradient(
+      to bottom, 
+      #e7e7e7 0.01%, 
+      #1a1a1a 100%
+    );
+}
+
+body {
+  background-image: var(--background-image);
+  background-size: cover; /* Занимает всё пространство страницы */
+  background-attachment: fixed; /* Фон фиксирован, скроллится со всей страницей */
+  margin: 0;
+}

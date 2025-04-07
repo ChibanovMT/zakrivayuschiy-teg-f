@@ -40,6 +40,7 @@
   justify-content: center;
   height: 368px;
   width: 700px;
+  background-color: white;
 }
 
 .logo-group {
@@ -71,6 +72,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .main_image {
@@ -83,6 +86,9 @@
   border: 2px solid black;
   flex-direction: column;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+  background-color: white;
 }
 
 .title {
@@ -96,6 +102,7 @@
 .for-watermark {
   position: relative;
   display: inline-block;
+  overflow: hidden;
 }
 
 .watermark {
@@ -146,6 +153,39 @@
   padding: 12.5px 37px; /* Внутренние отступы текста */
 }
 
+.for-image {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.filter-blur__hue-rotate {
+  filter: blur(3px) hue-rotate(0.3turn) opacity(70%);
+}
+
+.filter-invert {
+  filter: invert(80%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(0.1turn);
+}
+
+.filter-grayscale {
+  filter: grayscale(70%);
+}
+
+.filter-sepia {
+  filter: sepia(0.9);
+}
+
+.filter-saturate {
+  filter: saturate(400%);
+}
+
+.filter-blur {
+  filter: blur(20px);
+}
+
 /* -------------------------------------------------------------------------- */
 
 .footer_container {
@@ -162,6 +202,7 @@
   background-color: transparent; /* Прозрачный фон */
   cursor: pointer; /* Курсор руки при наведении */
   padding-right: 17px;
+  background-color: white;
 }
 
 .save_as-text {
@@ -174,8 +215,9 @@
 
 .svg_save-as {
   position: relative;
-  block-size: 1.5em;
+  block-size: 39px;
   mix-blend-mode: difference;
+  margin-right: 20px;
 }
 
 
@@ -193,11 +235,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin: 5px 5px 0px 5px;
+  margin: 20px 5px 30px 5px;
 }
 
 .dialog-text {
   width: 234px;
+}
+
+.dialog-button {
+  border: 2px solid black;
+  width: 293px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.dialog-button__OK {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dialog::backdrop {
@@ -213,4 +268,14 @@
   .watermark {
     -webkit-text-stroke: 1px var(--label-border-color); /* Обводка текста */
   }
+}
+
+
+
+
+
+
+
+@media (width <= 375px) {
+
 }
