@@ -96,7 +96,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
-  margin: 3px 24px 3px 10px;
+  margin: 7px 24px 6px 10px;
 }
 
 .for-watermark {
@@ -107,8 +107,8 @@
 
 .watermark {
   position: absolute;
-  top: 25px;
-  right: 28px;
+  top: 26px;
+  right: 25px;
   overflow: hidden;
   font-weight: 400;
   font-size: 14px;
@@ -199,8 +199,8 @@
   align-items: center; /* Выравниваем по вертикали */
   background-color: transparent; /* Прозрачный фон */
   cursor: pointer; /* Курсор руки при наведении */
-  padding-right: 17px;
   background-color: white;
+  padding: 0 18px 2px 21px;
 }
 
 .save_as-text {
@@ -208,14 +208,14 @@
   font-weight: 400;
   font-size: 14px;
   margin-top: 18.5px;
-  margin-bottom: 18.5px;
+  margin-bottom: 16px;
 }
 
 .svg_save-as {
   position: relative;
-  block-size: 39px;
+  block-size: 23px;
   mix-blend-mode: difference;
-  margin-right: 20px;
+  color: #fff;
 }
 
 
@@ -290,6 +290,7 @@
 .heart-button__try {
   border: none;
   cursor: pointer;
+  margin-right: 6px;
 }
 
 .like-button__try {

@@ -10,23 +10,18 @@
 
 */
 
-.card__icon-button {
+.card__button {
+  position: relative;
+  overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
-.card__icon-button:focus {
+.card__button:focus {
   outline: none;
   box-shadow: 2px 2px;
 }
 
-
-
-.card__icon-button {
-  position: relative; /* Для позиционирования псевдоэлемента */
-  overflow: hidden; /* Скрываем выходящие за пределы элементы */
-}
-
-.card__icon-button::before {
+.card__button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -39,11 +34,27 @@
   z-index: 0; /* Псевдоэлемент под текстом */
 }
 
-.card__icon-button:hover::before {
+.card__button:hover::before {
   transform: translateX(0); /* Конечное состояние */
 }
 
-.card__icon-button span {
+.card__button span {
   position: relative; /* Для текста кнопки */
   z-index: 1; /* Текст над псевдоэлементом */
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: black;
 }
