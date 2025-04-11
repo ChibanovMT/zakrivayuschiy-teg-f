@@ -11,6 +11,9 @@
 
   --label-text-color: black; /* Цвет текста лейбла */
   --label-border-color: white; /* Цвет обводки текста */
+
+  --contour-color: black;
+  --animation-fill-color: red;
 }
 
 

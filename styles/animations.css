@@ -58,3 +58,98 @@
 .card__icon-button:focus-visible {
   border-color: black;
 }
+
+/* --------Заливка сердца (:hover и :active)------------------------------------------------- */
+
+.heart {
+  /* Начальные стили для иконки сердца */
+  fill: transparent; /* Начальное значение для заливки */
+  transition: fill 0.3s ease; /* Плавный переход для заливки */
+}
+
+.heart .contour {
+  fill: var(--contour-color); /* Цвет контура */
+}
+
+/* Эффект при наведении */
+.heart:hover .core {
+  fill: var(--contour-color); /* Цвет сердцевины при наведении */
+  transition: fill 0.3s ease; /* Плавный переход для сердцевины */
+}
+
+.heart:hover .main-body {
+  fill: var(--contour-color); /* Цвет основного тела при наведении */
+  transition: fill 0.3s ease 0.05s; /* Плавный переход с задержкой для основного тела */
+}
+
+/* Эффект при уходе курсора */
+.heart:not(:hover) .main-body {
+  fill: transparent; /* Основное тело становится прозрачным при уходе курсора */
+  transition: fill 0.3s ease; /* Плавный переход для основного тела */
+}
+
+.heart:not(:hover) .core {
+  fill: transparent; /* Сердцевина становится прозрачной с задержкой */
+  transition: fill 0.3s ease 0.03s; /* Плавный переход с задержкой для сердцевины */
+}
+
+/* Эффект при нажатии и удержании кнопки мышки */
+.heart:active .core {
+  fill: var(--animation-fill-color); /* Цвет сердцевины при нажатии и удержании */
+  transition: fill 0.3s ease; /* Плавный переход для сердцевины */
+}
+
+.heart:active .main-body {
+  fill: var(--animation-fill-color); /* Цвет основного тела при нажатии и удержании */
+  transition: fill 0.3s ease 0.05s; /* Плавный переход с задержкой для основного тела */
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color); /* Цвет сердцевины при клике */
+  transition: fill 0.3s ease; /* Плавный переход для сердцевины */
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color); /* Цвет основного тела при клике */
+  transition: fill 0.3s ease 0.06s; /* Плавный переход с задержкой для основного тела */
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color); /* Цвет контура при клике */
+  transition: fill 0.3s ease 0.12s; /* Плавный переход с задержкой для контура */
+}
+
+/* Анимация масштабирования */
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+/* Анимация искр */
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Применение анимаций */
+.like-icon.is-liked {
+  animation: scale-heart 0.3s ease-in 0.1s forwards; /* Масштабирование сердца */
+}
+
+.like-icon.is-liked .sparkles {
+  animation: sparks 0.3s ease-in 0.3s forwards; /* Анимация искр */
+}
+
+/* Эффект при отпускании кнопки */
+.like-icon:not(.is-liked) .contour {
+  fill: var(--contour-color); /* Возврат цвета контура при отключении */
+  transition: fill 0.1s linear; /* Быстрый возврат цвета контура */
+}

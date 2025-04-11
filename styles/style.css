@@ -274,9 +274,6 @@
 
 
 
-@media (width <= 375px) {
-
-}
 
 /* --------Переработка кнопок------------------------------------------------- */
 
@@ -290,7 +287,8 @@
 .heart-button__try {
   border: none;
   cursor: pointer;
-  margin-right: 6px;
+  width: 55px;
+  height: 38px;
 }
 
 .like-button__try {
@@ -298,4 +296,52 @@
   border: 2px solid black;
   width: 130px;
   height: 38px;
+}
+
+
+
+
+
+.sparks {
+  opacity: 0;
+}
+
+
+@media (width <= 375px) {
+  .header_container {
+    height: 327px;
+    width: 375px;
+  }
+  .header_logo_main-text {
+    font-size: 49px;
+  }
+  .header_logo_supportive-text {
+    font-size: 14px;
+  }
+  .post {
+    width: 375px;
+  }
+  .main_image {
+    width: 371px;
+    height: 371px;
+  }
+  .watermark {
+    right: 11px;
+  }
+  .content {
+    max-width: 317.05px;
+  }
+  .save-button {
+    flex-direction: column;
+  }
+  .title {
+    line-height: 21px;
+    margin: 5px 24px 5px 10px;
+  }
+}
+
+
+
+
+.like-icon {
 }
