@@ -1,1 +1,1 @@
-https://chibanovmt.github.io/zakrivayuschiy-teg-f/
+https://github.com/ChibanovMT/zakrivayuschiy-teg-f
