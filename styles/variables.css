@@ -14,10 +14,8 @@
 
   --contour-color: black;
   --animation-fill-color: red;
-}
 
-
-:root {
+  
   --background-image: 
     /* Первый градиент: повторяющиеся полоски слева направо */
     repeating-linear-gradient(
