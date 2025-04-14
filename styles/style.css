@@ -13,17 +13,17 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-main); /* Основной шрифт PressStart2P */
+  font-family: var(--font-main);
 }
 
 .card-title {
   font-family: var(--font-accent);
-  font-variation-settings: 'wght' var(--font-weight-card-title); /* Настройка веса заголовка карточки */
+  font-variation-settings: 'wght' var(--font-weight-card-title);
 }
 
 .card-text {
   font-family: var(--font-accent);
-  font-variation-settings: 'wght' var(--font-weight-card-text); /* Настройка веса текста карточки */
+  font-variation-settings: 'wght' var(--font-weight-card-text);
 }
 
 .header {
@@ -129,20 +129,8 @@
   gap: 27px;
 }
 
-/*.like-button {
-  /*display: flex; /* Размещаем содержимое в строку */
-  /*align-items: center; /* Выравниваем по вертикали */
- /* border: none; /* Убираем границы кнопки */
-  /*background-color: transparent; /* Прозрачный фон */
-  /*cursor: pointer; /* Курсор руки при наведении */
-  /*width: 169px;
-  height: 38px;
-  margin-left: 494px;
-  margin-bottom: 25px;
-}*/
-
 .like-button img {
-  margin-right: 12px; /* Отступ между сердечком и текстом */
+  margin-right: 12px;
 }
 
 .like-text {
@@ -195,10 +183,10 @@
 
 .save-button {
   border: 2px solid black;
-  display: flex; /* Размещаем содержимое в строку */
-  align-items: center; /* Выравниваем по вертикали */
-  background-color: transparent; /* Прозрачный фон */
-  cursor: pointer; /* Курсор руки при наведении */
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
   background-color: white;
   padding: 0 18px 2px 21px;
 }
@@ -213,11 +201,14 @@
 
 .svg_save-as {
   position: relative;
-  block-size: 23px;
+  block-size: 21px;
   mix-blend-mode: difference;
   color: #fff;
 }
 
+.svg_save-as-dialog {
+  block-size: 39px;
+}
 
 
 
@@ -238,6 +229,7 @@
 
 .dialog-text {
   width: 234px;
+  margin-left: 20px;
 }
 
 .dialog-button {
@@ -264,7 +256,7 @@
 
 @supports (-webkit-text-stroke: 1px transparent) {
   .watermark {
-    -webkit-text-stroke: 1px var(--label-border-color); /* Обводка текста */
+    -webkit-text-stroke: 1px var(--label-border-color);
   }
 }
 
@@ -292,6 +284,7 @@
 }
 
 .like-button__try {
+  background: none;
   cursor: pointer;
   border: 2px solid black;
   width: 130px;
@@ -338,10 +331,16 @@
     line-height: 21px;
     margin: 5px 24px 5px 10px;
   }
+  .svg_save-as {
+    block-size: 28px;
+    margin-top: 15px;
+  }
+  .save_as-text {
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
 }
 
 
 
 
-.like-icon {
-}
