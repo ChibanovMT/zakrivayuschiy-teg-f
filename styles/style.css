@@ -14,9 +14,11 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-main);
+  font-variation-settings: 'wght' 400;
+  background-size: cover;
 }
 
-.card-title {
+/*.card-title {
   font-family: var(--font-accent);
   font-variation-settings: 'wght' var(--font-weight-card-title);
 }
@@ -24,7 +26,7 @@
 .card-text {
   font-family: var(--font-accent);
   font-variation-settings: 'wght' var(--font-weight-card-text);
-}
+}*/
 
 .header {
   display: flex;
@@ -38,9 +40,9 @@
   border: 2px solid black;
   align-items: center;
   justify-content: center;
-  height: 368px;
   width: 700px;
   background-color: white;
+  padding: 128px 120.5px;
 }
 
 .logo-group {
@@ -54,7 +56,6 @@
   font-weight: 400;
   font-size: 65px;
   line-height: 100%;
-  letter-spacing: 0%;
   text-transform: uppercase;
 }
 
@@ -62,7 +63,6 @@
   font-weight: 400;
   font-size: 23px;
   line-height: 100%;
-  letter-spacing: 0%;
   text-transform: uppercase;
 }
 
@@ -77,8 +77,8 @@
 }
 
 .main_image {
-  width: 696px;
-  height: 696px;
+  max-width: 696px;
+  max-height: 696px;
 }
 
 .post {
@@ -93,6 +93,7 @@
 
 .title {
   font-family: var(--font-accent);
+  font-variation-settings: 'wght' 700;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
@@ -115,6 +116,7 @@
   line-height: 100%;
   color: var(--label-text-color);
   opacity: 50%;
+  text-shadow: 1px 1px var(--label-border-color);
 }
 
 .content {
@@ -187,7 +189,9 @@
   align-items: center;
   cursor: pointer;
   background-color: white;
-  padding: 0 18px 2px 21px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 103px;
 }
 
 .save_as-text {
@@ -211,11 +215,13 @@
 
 
 
-.dialog {
+.dialog[open] {
   width: calc(100% - 40px);
   max-width: 353px;
-  height: 191px;
-  position: fixed;
+  padding-bottom: 26px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  margin-bottom: 384.5px;
 }
 
 .dialog-content {
@@ -236,6 +242,7 @@
   width: 293px;
   height: 38px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .dialog-button__OK {
@@ -245,17 +252,18 @@
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.7);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 
 
 
 
-@supports (-webkit-text-stroke: 1px transparent) {
-  .watermark {
-    -webkit-text-stroke: 1px var(--label-border-color);
+@supports (text-stroke: 1px transparent) or (-webkit-text-stroke: 1px transparent) { 
+  .watermark { 
+    -webkit-text-stroke: 1px var(--label-border-color); 
+    text-stroke: 1px var(--label-border-color);
+    text-shadow: none;
   }
 }
 
@@ -301,8 +309,8 @@
 
 @media (width <= 375px) {
   .header_container {
-    height: 327px;
     width: 375px;
+    padding: 120px 14px;
   }
   .header_logo_main-text {
     font-size: 49px;
@@ -314,8 +322,8 @@
     width: 375px;
   }
   .main_image {
-    width: 371px;
-    height: 371px;
+    max-width: 371px;
+    max-height: 371px;
   }
   .watermark {
     right: 11px;
@@ -325,6 +333,7 @@
   }
   .save-button {
     flex-direction: column;
+    padding: 3px 20px 0px 20px;
   }
   .title {
     line-height: 21px;
@@ -332,11 +341,20 @@
   }
   .svg_save-as {
     block-size: 28px;
-    margin-top: 15px;
+    margin-top: 12px;
   }
   .save_as-text {
     margin-top: 8px;
-    margin-bottom: 15px;
+    padding-left: 0px;
+  }
+  .post:nth-child(2) .content {
+    max-width: 318.32px;
+  }
+  .post:nth-child(4) .content {
+    max-width: 317.46px;
+  }
+  .post:nth-child(8) .content {
+    max-width: 319.57px;
   }
 }
 
