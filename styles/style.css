@@ -13,6 +13,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: var(--font-main);
   font-variation-settings: 'wght' 400;
   background-size: cover;
@@ -77,8 +79,8 @@
 }
 
 .main_image {
-  max-width: 696px;
-  max-height: 696px;
+  max-width: 100%;
+  height: auto;
 }
 
 .post {
@@ -89,6 +91,7 @@
   position: relative;
   z-index: 2;
   background-color: white;
+  width: 700px;
 }
 
 .title {
@@ -144,6 +147,8 @@
 .for-image {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .filter-blur__hue-rotate {
@@ -281,13 +286,18 @@
   justify-content: end;
   margin-bottom: 25px;
   margin-right: 25px;
+  column-gap: 4px;
 }
 
 .heart-button__try {
+  display: flex;
   border: none;
   cursor: pointer;
-  width: 55px;
+  width: 43px;
   height: 38px;
+  background-color: transparent;
+  align-items: center;
+  flex-direction: column;
 }
 
 .like-button__try {
@@ -355,6 +365,26 @@
   }
   .post:nth-child(8) .content {
     max-width: 319.57px;
+  }
+  .dialog[open] {
+    margin-bottom: 193px;
+    padding-top: 11px;
+    width: 340px;
+  }
+  .dialog-text {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .dialog-content {
+    margin: 17px 5px 27px 23px;
+  }
+  .svg_save-as-dialog {
+    block-size: 42px;
+  }
+  .dialog-button {
+    width: 258px;
+    height: 37px;
+    margin-bottom: 6px;
   }
 }
 
