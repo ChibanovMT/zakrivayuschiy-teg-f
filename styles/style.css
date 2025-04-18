@@ -42,7 +42,7 @@
   border: 2px solid black;
   align-items: center;
   justify-content: center;
-  width: 700px;
+  width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   background-color: white;
   padding: 128px 120.5px;
 }
@@ -56,14 +56,14 @@
 
 .header_logo_main-text {
   font-weight: 400;
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 100%;
   text-transform: uppercase;
 }
 
 .header_logo_supportive-text {
   font-weight: 400;
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 100%;
   text-transform: uppercase;
 }
@@ -91,7 +91,7 @@
   position: relative;
   z-index: 2;
   background-color: white;
-  width: 700px;
+  width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
 }
 
 .title {
